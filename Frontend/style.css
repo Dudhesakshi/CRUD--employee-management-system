@@ -1,0 +1,365 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+
+/* ================= LOGIN PAGE ================= */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: linear-gradient(135deg, #1e3a8a, #2563eb, #4f46e5);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    font-size: 22px;
+    color: #374151;
+    margin-bottom: 30px;
+}
+
+
+/* Login Form */
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+    background: #f9fafb;
+
+    transition: all 0.3s ease;
+}
+
+#loginForm input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+#loginForm input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Login Button */
+
+#loginForm button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#loginForm button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+#loginForm button:active {
+    transform: translateY(0);
+}
+
+
+/* Login Message */
+
+#loginMessage {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin-bottom: 0;
+}
+
+
+/* Logout */
+
+.logout-btn {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #dc2626;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+
+/* ================= FORM ================= */
+
+.form-container,
+.employee-container {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#employeeForm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#employeeForm input {
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+#employeeForm input:focus {
+    outline: none;
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+#employeeForm button {
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    background: #2563eb;
+    color: white;
+
+    transition: 0.3s;
+}
+
+#employeeForm button:hover {
+    background: #1d4ed8;
+}
+
+#cancelButton {
+    background: #6b7280 !important;
+}
+
+#cancelButton:hover {
+    background: #4b5563 !important;
+}
+
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #1f2937;
+    color: white;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    color: white;
+
+    margin-right: 5px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    #employeeForm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .employee-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 900px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    #employeeForm {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .login-box h1 {
+        font-size: 23px;
+    }
+
+    .login-box h2 {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

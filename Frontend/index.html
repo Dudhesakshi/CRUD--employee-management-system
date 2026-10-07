@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+
+    <div id="loginSection" class="login-container">
+
+        <div class="login-box">
+
+            <h1>Employee Management System</h1>
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <input type="email" id="loginEmail" placeholder="Email" required>
+
+                <input type="password" id="loginPassword" placeholder="Password" required>
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <div id="dashboardSection" class="container" style="display:none;">
+
+        <div class="header">
+
+            <h1>Employee Management System</h1>
+
+            <button type="button" class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- Employee Form -->
+
+        <div class="form-container">
+
+            <h2>Add Employee</h2>
+
+            <form id="employeeForm">
+
+                <input type="hidden" id="employeeId">
+
+                <input type="text" id="name" placeholder="Employee Name" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="text" id="department" placeholder="Department" required>
+
+                <input type="text" id="position" placeholder="Position" required>
+
+                <input type="number" id="salary" placeholder="Salary" required>
+
+                <input type="date" id="dateOfJoining" required>
+
+                <button type="submit">
+                    Save Employee
+                </button>
+
+                <button type="button" id="cancelButton" onclick="cancelEdit()" style="display:none;">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Employee List -->
+
+        <div class="employee-container">
+
+            <h2>Employee List</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Date of Joining</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="employeeTableBody">
+                    <!-- Employees appear here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
